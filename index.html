@@ -1,0 +1,17 @@
+---
+title: Welcome
+layout: default
+---
+
+<div class="swag">
+  <object class="nljs-logo" type="image/svg+xml" data="images/nljs.svg">
+  Your browser does not support SVG
+  </object>
+  <div>JS related events in the Netherlands.</div>
+  <div>Add your event</div>
+</div>
+<div class="posts">
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }})
+{% endfor %}
+</div>

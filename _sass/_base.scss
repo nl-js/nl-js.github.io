@@ -1,0 +1,26 @@
+// scss stuffs
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    a {
+      color: $link-color;
+    }
+}
+
+/**
+ * Clearfix
+ */
+@mixin clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
