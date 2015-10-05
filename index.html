@@ -29,7 +29,7 @@ layout: default
                 {% assign postYear = post.date | date: "%Y" %}
 
                 {% if post_index == 1 %}
-                    {% assign firstPostYear = post.date | date: "%Y" %}
+                {% assign firstPostYear = post.date | date: "%Y" %}
                 {% endif %}
 
                 {% if post_index == 1 or postMonth != previousPostMonth %}
@@ -40,17 +40,20 @@ layout: default
                 {% endif %}
                 {% assign previousPostMonth = post.date | date: "%y %m" %}
                 <li class="item">
-                    <div id="{{ post.id }}">
+                    <div id="{{ post.id }}" class="item-post">
                         <div class="time">
-                            <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
-                                <span>{{ post.date | date: "%d" }}</span>
-                                <span>{{ post.date | date: "%a" }}</span>
-                            </time>
+                            <div class="wt">
+
+                                <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
+                                    <span>{{ post.date | date: "%d" }}</span>
+                                    <span>{{ post.date | date: "%a" }}</span>
+                                </time>
+                            </div>
                         </div>
                         <div class="details">
-                            <span class="title">
+                            <div class="title">
                                 <a href="{{ post.href }}">{{ post.title }}</a>
-                            </span>
+                            </div>
                             <div class="info">
                                 <span><strong>Time:</strong> {{ post.time }}</span>
                                 <span><strong>Venue: </strong>{{ post.venue }}</span>
