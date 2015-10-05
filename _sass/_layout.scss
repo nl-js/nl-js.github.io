@@ -1,3 +1,26 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -$footer-height;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.footer, .page-wrap:after {
+    height: $footer-height;
+}
+
 body {
     background-color: $grey-color-light;
 }
@@ -33,16 +56,21 @@ body {
         background-color: $background-color;
         .logo {
             display: inline-block;
-            width: 45%;
+            width: 48%;
             height: auto;
         }
+        .logoh {
+            display: none;
+        }
         .description {
+            box-sizing: border-box;
             color: $text-dark-color;
             background-color: $grey-color;
             float: right;
             display: inline-block;
-            width: 45%;
-            height: 360px;
+            width: 48%;
+            height: $description-block-height;
+            padding: 10px;
         }
     }
 }
@@ -57,21 +85,84 @@ body {
         padding: 0px;
     }
     .item {
+        height: $item-height;
         list-style-type: none;
         background-color: $grey-color;
         margin-bottom: 10px;
+
+        .time {
+            color: $brand-color;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight: bold;
+            background-color: darken($grey-color, 10%);
+            width: 80px;
+            height: $item-height;
+            padding-top: 3px;
+            float: left;
+            font-size: 110%;
+        }
+
+        .details {
+            padding: 5px 10px 5px 20px;
+            display: inline-block;
+
+            .title {
+
+            }
+
+            .info {
+                color: $text-dark-color;
+                font-size: 80%;
+            }
+        }
+    }
+    .month-name {
+        font-weight: bold;
+        color: $text-dark-color;
+        list-style-type: none;
+        margin-bottom: 2px;
     }
 }
 
 .footer {
     width: 100%;
     background-color: $grey-color;
-    height: 30px;
+    height: $footer-height;
     margin-bottom: 0px;
-    margin-top: 30px;
     .copy {
         margin: 0 auto;
         width: $content-width;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .header-container {
+        header {
+            width: $content-width-responsive;
+            .logoh {
+                display: inline-block;
+                margin-top: -10px;
+                margin-right: -10px;
+                margin-bottom: -10px;
+                float: right;
+                width: 100px;
+                height: 100px;
+            }
+            .logo {
+                display: none;
+            }
+            .description {
+                width: 100%;
+                float: none;
+                min-height: 100px;
+                height: initial;
+                padding: 10px;
+            }
+        }
+    }
+    .content-container {
+        width: $content-width-responsive;
     }
 }

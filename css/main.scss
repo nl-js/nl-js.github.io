@@ -19,11 +19,17 @@ $background-color-bottom: $orangina;
 $brand-color:      white;
 
 $grey-color: #d0d0d0;
-$grey-color-light: lighten($grey-color, 10%);
+$grey-color-light: lighten($grey-color, 15%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    600px;
+$description-block-height:    289px;
+
+$content-width-responsive: 90%;
+
+$item-height : 55px;
+$footer-height : 30px;
 
 $on-palm:          600px;
 $on-laptop:        800px;

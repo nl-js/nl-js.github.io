@@ -2,62 +2,67 @@
 title: Welcome
 layout: default
 ---
-
-<div class="top-header">
-    <div class="menu">
-        <ul>
-            <li>About</li>
-            <li>Add event</li>
-        </ul>
-    </div>
-</div>
-<div class="header-container">
-    <header>
-        <object class="logo" type="image/svg+xml" data="images/nljs.svg">
-        </object>
-        <div class="description">
-            JS events in NL bla bla bla
+<div class="page-wrap">
+    <div class="top-header">
+        <div class="menu">
+            <ul>
+                <li>About</li>
+                <li>Add event</li>
+            </ul>
         </div>
-    </header>
-</div>
-<div class="content-container">
-    <div>
-        <ul>
-            {% for post in site.posts reversed %}
-            <li class="item">
-                <div id="{{ post.id }}">
-                    {% if post.date == previousDate %}
-                    <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
-                        <span>{{ post.date | date: "%Y" }}</span> /
-                        <span>{{ post.date | date: "%m" }}</span> /
-                        <span>{{ post.date | date: "%d" }}</span>
-                    </time>
-                    {% else %}
-                    <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
-                        <span>{{ post.date | date: "%Y" }}</span> /
-                        <span>{{ post.date | date: "%m" }}</span> /
-                        <span>{{ post.date | date: "%d" }}</span>
-                    </time>
-                    {% endif %}
-                    <div>
-          <span>
-            <a href="{{ post.href }}">{{ post.title }}</a>
-          </span>
-                        <a href="#{{ post.id }}">+</a>
-                        <a href="#"></a> {% assign previousDate = post.date %}
-                        <div>
-            <span>
-              <span>Time:</span> {{ post.time }}</span>
-            <span>
-              <span>Venue: </span>{{ post.venue }}</span>
-            <span>
-              <span>Ticket:</span> {{ post.ticket }}</span>
+    </div>
+    <div class="header-container">
+        <header>
+            <object class="logo" type="image/svg+xml" data="images/nljs.svg"></object>
+            <div class="description">
+                JS events in NL bla bla bla
+                <object class="logoh" type="image/svg+xml" data="images/nljs.svg"></object>
+            </div>
+        </header>
+    </div>
+    <div class="content-container">
+        <div>
+            <ul>
+                {% assign post_index = 1 %}
+                {% for post in site.posts reversed %}
+                {% assign postMonth = post.date | date: "%y %m" %}
+                {% assign postYear = post.date | date: "%Y" %}
+
+                {% if post_index == 1 %}
+                    {% assign firstPostYear = post.date | date: "%Y" %}
+                {% endif %}
+
+                {% if post_index == 1 or postMonth != previousPostMonth %}
+                <li class="month-name">
+                    {{ post.date | date: "%B" }}
+                    {% if firstPostYear != postYear %}{{ postYear }}{% endif %}
+                </li>
+                {% endif %}
+                {% assign previousPostMonth = post.date | date: "%y %m" %}
+                <li class="item">
+                    <div id="{{ post.id }}">
+                        <div class="time">
+                            <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
+                                <span>{{ post.date | date: "%d" }}</span>
+                                <span>{{ post.date | date: "%a" }}</span>
+                            </time>
+                        </div>
+                        <div class="details">
+                            <span class="title">
+                                <a href="{{ post.href }}">{{ post.title }}</a>
+                            </span>
+                            <div class="info">
+                                <span><strong>Time:</strong> {{ post.time }}</span>
+                                <span><strong>Venue: </strong>{{ post.venue }}</span>
+                                <span><strong>Ticket:</strong> {{ post.ticket }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+                </li>
+                {% assign post_index = post_index | plus: 1 %}
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-</div>
 
+</div>
