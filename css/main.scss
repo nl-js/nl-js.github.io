@@ -14,7 +14,7 @@ $orangina: rgba(230, 126, 34, 1);
 $text-color:       $orangina;
 $link-color:       $orangina;
 $background-color: white; // #fdfdfd;
-$background-color-top: $orangina;
+$background-color-bottom: $orangina;
 $brand-color:      white;
 
 $grey-color:       #828282;
@@ -27,22 +27,5 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-@import "base";
-
-.posts {
-  min-height: 900px;
-}
-.swag {
-  width: 100%;
-  text-align:center;
-  .nljs-logo {
-    margin: 50px;
-    width: 200px;
-
-  }
-}
-
-.footer {
-  width: 100%;
-  text-align: center;
-}
+@import 'global';
+@import 'layout';

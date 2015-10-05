@@ -3,15 +3,49 @@ title: Welcome
 layout: default
 ---
 
-<div class="swag">
-  <object class="nljs-logo" type="image/svg+xml" data="images/nljs.svg">
-  Your browser does not support SVG
+<div class="top">
+  <object class="logo" type="image/svg+xml" data="images/nljs.svg">
   </object>
-  <div>JS related events in the Netherlands.</div>
-  <div>Add your event</div>
+  <p>
+    JS events in NL
+  </p>
 </div>
-<div class="posts">
-{% for post in site.posts %}
-- [{{ post.title }}]({{ post.url }})
-{% endfor %}
+<div>
+  <ol>
+    {% for post in site.posts reversed %}
+    <li>
+      <divid="{{ post.id }}">
+        {% if post.date == previousDate %}
+        <time datetime="{{ post.date | date: " %Y-%m-%d " }}">
+          <span>{{ post.date | date: "%Y" }}</span> /
+          <span>{{ post.date | date: "%m" }}</span> /
+          <span>{{ post.date | date: "%d" }}</span>
+        </time>
+        {% else %}
+        <time datetime="{{ post.date | date: " %Y-%m-%d " }}">
+          <span>{{ post.date | date: "%Y" }}</span> /
+          <span>{{ post.date | date: "%m" }}</span> /
+          <span>{{ post.date | date: "%d" }}</span>
+        </time>
+        {% endif %}
+        <div>
+          <span>
+            <a href="{{ post.href }}">{{ post.title }}</a>
+          </span>
+          <a href="#{{ post.id }}">+</a>
+          <a href="#"></a> {% assign previousDate = post.date %}
+          <div>
+            <span>
+              <span>Time:</span> {{ post.time }}</span>
+            <span>
+              <span>Venue: </span>{{ post.venue }}</span>
+            <span>
+              <span>Ticket:</span> {{ post.ticket }}</span>
+          </div>
+        </div>
+        </a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
 </div>

@@ -1,0 +1,33 @@
+// Stuff in this file applies to tag names only - use sparingly
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  background-color: $background-color;
+  a {
+    color: $link-color;
+  }
+  margin: 0;
+}
+h1 {
+  font-family: $base-font-family;
+  font-size: 2em;
+  line-height: 1.3em;
+  margin: 0 0 0.5em;
+
+  section & {
+    font-size: 1.5em;
+  }
+}
+pre,
+code {
+  font-family: $base-font-family;
+}
+a:link, a:visited {
+  color: $link-color;
+}
+a:hover {
+  text-decoration: underline;
+}
