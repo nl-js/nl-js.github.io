@@ -1,7 +1,77 @@
-.top {
-  width: 800px;
-  .logo {
-    width: 50%;
-    height: auto;
-  }
+body {
+    background-color: $grey-color-light;
+}
+
+.top-header {
+    width: 100%;
+    background-color: $grey-color;
+    height: 30px;
+    text-align: right;
+
+    ul {
+        margin: 0px;
+        li {
+            font-weight: bold;
+            color: $text-dark-color;
+            display: inline;
+            list-style-type: none;
+            padding-right: 20px;
+        }
+    }
+}
+
+.header-container {
+    width: 100%;
+    background-color: $background-color;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+
+    header {
+        margin: 0 auto;
+        width: $content-width;
+        background-color: $background-color;
+        .logo {
+            display: inline-block;
+            width: 45%;
+            height: auto;
+        }
+        .description {
+            color: $text-dark-color;
+            background-color: $grey-color;
+            float: right;
+            display: inline-block;
+            width: 45%;
+            height: 360px;
+        }
+    }
+}
+
+.content-container {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: $content-width;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    .item {
+        list-style-type: none;
+        background-color: $grey-color;
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $grey-color;
+    height: 30px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    .copy {
+        margin: 0 auto;
+        width: $content-width;
+        text-align: center;
+    }
 }

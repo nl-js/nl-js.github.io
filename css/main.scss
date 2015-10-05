@@ -11,14 +11,15 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 $orangina: rgba(230, 126, 34, 1);
 
+$text-dark-color:       darken($orangina, 35%);
 $text-color:       $orangina;
 $link-color:       $orangina;
 $background-color: white; // #fdfdfd;
 $background-color-bottom: $orangina;
 $brand-color:      white;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color: #d0d0d0;
+$grey-color-light: lighten($grey-color, 10%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
@@ -27,5 +28,5 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-@import 'global';
-@import 'layout';
+@import "global";
+@import "layout";
