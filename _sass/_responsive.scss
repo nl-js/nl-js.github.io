@@ -1,0 +1,15 @@
+@media all and (max-width: $on-phone) {
+
+	.top-header h1 {
+		margin: 10px;
+	}
+
+	.events-container .info span {
+		display: block;
+	}
+
+	.events-container .events dl .item {
+    	border-color: $orangina;
+    }
+
+}

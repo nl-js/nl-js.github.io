@@ -54,11 +54,14 @@ body {
 
 // logo + description
 .header-container {
+  
   width: 100%;
-  background-color: white;
+  background-color: #fff;
   margin: 0;
   padding: 10px;
   display: table;
+  box-sizing: border-box;
+
   header {
     display: table-row;
     width: 100%;
