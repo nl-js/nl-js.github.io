@@ -26,6 +26,12 @@ body {
   background-color: $orangina;
   text-align: right;
   line-height: $header-height;
+  h1 {
+    float: left;
+    margin: 0 0 0 20px;
+    font-weight: 100;
+    color: #fff;
+  }
   ul {
     padding-right: 1em;
     margin: 0;
@@ -106,6 +112,10 @@ body {
         }
         .description {
           width: 50%;
+
+          p {
+            margin-bottom : 15px;
+          }
         }
       }
     }
@@ -126,6 +136,19 @@ body {
         &:first-child {
           margin-top: 0;
         }
+      }
+
+      dd {
+        span strong {
+          padding-left: 20px;
+
+        }
+
+        span:first-child strong {
+          padding-left: 0;
+
+        }
+
       }
     }
   }
