@@ -1,198 +1,175 @@
 * {
-    margin: 0;
+  margin: 0;
 }
-
-html, body {
-    height: 100%;
-}
-
-.page-wrap {
-    min-height: 100%;
-    /* equal to footer height */
-    margin-bottom: -$footer-height;
-}
-
-.page-wrap:after {
-    content: "";
-    display: block;
-}
-
-.footer, .page-wrap:after {
-    height: $footer-height;
-}
-
+html,
 body {
-    min-width: 450px;
-    background-color: $grey-color-light;
+  height: 100%;
+  background-color: $orangina;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -$footer-height;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.footer,
+.page-wrap:after {
+  height: $footer-height;
 }
 
+// header with menu
 .top-header {
-    width: 100%;
-    background-color: $grey-color;
-    height: 30px;
-    text-align: right;
-
-    ul {
-        margin: 0px;
-        li {
-            font-weight: bold;
-            color: $text-dark-color;
-            display: inline;
-            list-style-type: none;
-            padding-right: 20px;
-        }
+  width: 100%;
+  background-color: $orangina;
+  text-align: right;
+  line-height: $header-height;
+  ul {
+    padding-right: 1em;
+    margin: 0;
+    li {
+      font-weight: 100;
+      color: $text-light-color;
+      display: inline;
+      list-style-type: none;
+      padding-right: 0.8em;
+      &:last-child {
+        padding-right: 0;
+      }
     }
+  }
 }
 
+// logo + description
 .header-container {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+  display: table;
+  header {
+    display: table-row;
     width: 100%;
     background-color: $background-color;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0px;
-
-    header {
-        margin: 0 auto;
-        width: $content-width;
-        background-color: $background-color;
-        .logo {
-            display: inline-block;
-            width: 48%;
-            height: auto;
+    .parts {
+      width: 100%;
+      display: table; // haha cheat
+      line-height: 0;
+      .logo {
+        display: table-cell;
+        height: auto;
+        width: 100px;
+        object {
+          height: auto;
+          width: 100%;
+          // padding: 10px;
         }
-        .logoh {
-            display: none;
+      }
+      .divider {
+        display: none;
+      }
+      .description {
+        line-height: $base-line-height;
+        display: table-cell;
+        margin: 0;
+        padding: 0;
+        color: $link-color;
+        // background-color: $grey-color;
+        height: 100%;
+        text-align: left;
+        vertical-align: bottom;
+        padding-left: 10px;
+      }
+    }
+  }
+  @media screen and (min-width: $on-palm) {
+    padding: 20px 0;
+    header {
+      display: block;
+      margin: 0 auto;
+      width: $on-palm;
+      .parts {
+        display: table-row;
+        .logo {
+          margin: 10px;
+          width: 50%;
+          object {
+            // padding: 0;
+          }
+        }
+        .divider {
+          border-right: 10px solid white;
+          border-left: 10px solid white;
+          display: table-cell;
         }
         .description {
-            box-sizing: border-box;
-            color: $text-dark-color;
-            background-color: $grey-color;
-            float: right;
-            display: inline-block;
-            width: 48%;
-            height: $description-block-height;
-            padding: 10px;
+          width: 50%;
         }
+      }
     }
+  }
 }
-
-.content-container {
-    padding-top: 10px;
+.events-container {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  border-top: 10px solid $orangina;
+  .events {
+    padding: 10px;
+    dl {
+      dt.month-name {
+        font-weight: 100;
+        color: $link-color;
+        margin-top: 20px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $on-palm) {
+    border-top: 0;
     margin: 0 auto;
-    width: $content-width;
-
-    ul {
-        margin: 0px;
-        padding: 0px;
-    }
-    .item {
-        height: $item-height;
-        list-style-type: none;
-        background-color: $grey-color;
-        margin-bottom: 10px;
-
-        .item-post {
-            display: table-row;
+    width: $on-palm;
+    .events {
+      margin-top: 20px;
+      padding: 20px 0;
+      dl {
+        margin-left:20px;
+        margin-right:20px;
+        position:relative;
+        dt.month-name {
+          position: relative;
+          p {
+            width: 200px;
+            color: $text-light-color;
+            text-align: right;
+            position: absolute;
+            left: -240px;
+            margin-top: 0;
+            margin-top: 0;
+          }
         }
-        .time {
-            display: table-cell;
-            color: $brand-color;
-            vertical-align: middle;
-            text-align: center;
-            font-weight: bold;
-            background-color: darken($grey-color, 10%);
-            width: 80px;
-            height: $item-height;
-            font-size: 110%;
-            .wt {
-                width: 80px;
-            }
-        }
+        dd {
 
-        .details {
-            display: table-cell;
-            padding: 5px 10px 5px 20px;
-            .title {
-                a {
-                    width: 490px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: block;
-                }
-            }
-
-            .info {
-                color: $text-dark-color;
-                font-size: 80%;
-            }
         }
+      }
     }
-    .month-name {
-        font-weight: bold;
-        color: $text-dark-color;
-        list-style-type: none;
-        margin-bottom: 2px;
-    }
+  }
 }
 
 .footer {
-    width: 100%;
-    background-color: $grey-color;
-    height: $footer-height;
-    margin-bottom: 0px;
-    .copy {
-        margin: 0 auto;
-        width: $content-width;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 625px) {
-    .header-container {
-        header {
-            width: $content-width-responsive;
-            .logoh {
-                display: inline-block;
-                margin-top: -10px;
-                margin-right: -10px;
-                margin-bottom: -10px;
-                float: right;
-                width: 100px;
-                height: 100px;
-            }
-            .logo {
-                display: none;
-            }
-            .description {
-                width: 100%;
-                float: none;
-                min-height: 100px;
-                height: initial;
-                padding: 10px;
-            }
-        }
-    }
-    .content-container {
-        width: $content-width-responsive;
-        .item .details .title a {
-            width: 400px;
-        }
-    }
-}
-
-@media screen and (max-width: 555px) {
-    .content-container {
-        .item .details .title a {
-            width: 360px;
-        }
-    }
-}
-
-@media screen and (max-width: 510px) {
-    .content-container {
-        .item .details .title a {
-            width: 310px;
-        }
-    }
+  width: 100%;
+  font-weight:100;
+  color: $orangina;
+  background-color: white;
+  line-height: 3em;
+  height: auto;
+  margin-bottom: 0;
+  .copy {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
