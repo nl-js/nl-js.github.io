@@ -50,3 +50,11 @@ href: "http://www.meetup.com/asdasdasdasd"
 
 We can explain this, but github can [explain it better](https://help.github.com/articles/using-pull-requests/).
 If you'd just like to get your hands dirty, [check here](https://help.github.com/articles/creating-a-pull-request/)
+
+
+
+## Collaborators
+
+- JP Wesselink - [twitter.com/jp10k](https://twitter.com/jp10k) [github.com/jpwesselink](https://github.com/jpwesselink)
+- Davide Fiorello - [twitter.com/davidefiorello](https://twitter.com/davidefiorello) [github.com/codeflyer](https://github.com/codeflyer)
+- Rick Heere - [github.com/rickheere](https://github.com/rickheere)
