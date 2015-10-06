@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Angularjs Meetup #5"
-date: 2015-10-15
+title: "Frontend Developer Meetup"
+date: 2015-10-29
 venue: "Herengracht 66, Amsterdam"
 ticket: "free"
 time: "19:00"
