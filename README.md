@@ -45,6 +45,15 @@ href: "http://www.meetup.com/asdasdasdasd"
 
 ```
 
+### See what your post looks like
+
+This site is created using [jekyll](http://jekyllrb.com/).
+After you have installed `jekyll` you can serve the site on your own machine
+using
+
+```bash
+$ jekyll serve
+```
 
 ### What is this `pull request` you are talking about?
 
