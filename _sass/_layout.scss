@@ -1,175 +1,190 @@
 * {
-  margin: 0;
+    margin: 0;
 }
+
 html,
 body {
-  height: 100%;
-  background-color: $orangina;
+    height: 100%;
+    background-color: $orangina;
 }
+
 .page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -$footer-height;
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -$footer-height;
 }
+
 .page-wrap:after {
-  content: "";
-  display: block;
+    content: "";
+    display: block;
 }
+
 .footer,
 .page-wrap:after {
-  height: $footer-height;
+    height: $footer-height;
 }
 
 // header with menu
 .top-header {
-  width: 100%;
-  background-color: $orangina;
-  text-align: right;
-  line-height: $header-height;
-  ul {
-    padding-right: 1em;
-    margin: 0;
-    li {
-      font-weight: 100;
-      color: $text-light-color;
-      display: inline;
-      list-style-type: none;
-      padding-right: 0.8em;
-      &:last-child {
-        padding-right: 0;
-      }
+    width: 100%;
+    background-color: $orangina;
+    text-align: right;
+    line-height: $header-height;
+    ul {
+        padding-right: 1em;
+        margin: 0;
+        li {
+            font-weight: 100;
+            color: $text-light-color;
+            display: inline;
+            list-style-type: none;
+            padding-right: 0.8em;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
     }
-  }
 }
 
 // logo + description
 .header-container {
-  width: 100%;
-  background-color: white;
-  margin: 0;
-  padding: 10px;
-  display: table;
-  header {
-    display: table-row;
     width: 100%;
-    background-color: $background-color;
-    .parts {
-      width: 100%;
-      display: table; // haha cheat
-      line-height: 0;
-      .logo {
-        display: table-cell;
-        height: auto;
-        width: 100px;
-        object {
-          height: auto;
-          width: 100%;
-          // padding: 10px;
-        }
-      }
-      .divider {
-        display: none;
-      }
-      .description {
-        line-height: $base-line-height;
-        display: table-cell;
-        margin: 0;
-        padding: 0;
-        color: $link-color;
-        // background-color: $grey-color;
-        height: 100%;
-        text-align: left;
-        vertical-align: bottom;
-        padding-left: 10px;
-      }
-    }
-  }
-  @media screen and (min-width: $on-palm) {
-    padding: 20px 0;
-    header {
-      display: block;
-      margin: 0 auto;
-      width: $on-palm;
-      .parts {
-        display: table-row;
-        .logo {
-          margin: 10px;
-          width: 50%;
-          object {
-            // padding: 0;
-          }
-        }
-        .divider {
-          border-right: 10px solid white;
-          border-left: 10px solid white;
-          display: table-cell;
-        }
-        .description {
-          width: 50%;
-        }
-      }
-    }
-  }
-}
-.events-container {
-  width: 100%;
-  background-color: white;
-  margin: 0;
-  border-top: 10px solid $orangina;
-  .events {
+    background-color: white;
+    margin: 0;
     padding: 10px;
-    dl {
-      dt.month-name {
-        font-weight: 100;
-        color: $link-color;
-        margin-top: 20px;
-        &:first-child {
-          margin-top: 0;
+    display: table;
+    header {
+        display: table-row;
+        width: 100%;
+        background-color: $background-color;
+        .parts {
+            width: 100%;
+            display: table; // haha cheat
+            line-height: 0;
+            .logo {
+                display: table-cell;
+                height: auto;
+                width: 100px;
+                object {
+                    height: auto;
+                    width: 100%;
+                    // padding: 10px;
+                }
+            }
+            .divider {
+                display: none;
+            }
+            .description {
+                line-height: $base-line-height;
+                display: table-cell;
+                margin: 0;
+                padding: 0;
+                color: $link-color;
+                // background-color: $grey-color;
+                height: 100%;
+                text-align: left;
+                vertical-align: bottom;
+                padding-left: 10px;
+            }
         }
-      }
     }
-  }
-  @media screen and (min-width: $on-palm) {
-    border-top: 0;
-    margin: 0 auto;
-    width: $on-palm;
-    .events {
-      margin-top: 20px;
-      padding: 20px 0;
-      dl {
-        margin-left:20px;
-        margin-right:20px;
-        position:relative;
-        dt.month-name {
-          position: relative;
-          p {
-            width: 200px;
-            color: $text-light-color;
-            text-align: right;
-            position: absolute;
-            left: -240px;
-            margin-top: 0;
-            margin-top: 0;
-          }
+    @media screen and (min-width: $on-palm +170) {
+        padding: 20px 0;
+        header {
+            display: block;
+            margin: 0 auto;
+            width: $on-palm;
+            .parts {
+                display: table-row;
+                .logo {
+                    margin: 10px;
+                    width: 50%;
+                    object {
+                        // padding: 0;
+                    }
+                }
+                .divider {
+                    border-right: 10px solid white;
+                    border-left: 10px solid white;
+                    display: table-cell;
+                }
+                .description {
+                    width: 50%;
+                }
+            }
         }
-        dd {
+    }
+}
 
+.events-container {
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    border-top: 10px solid $orangina;
+    .events {
+        padding: 10px;
+        dl {
+            .item {
+                padding-top: 5px;
+                padding-bottom: 10px;
+
+                border-bottom: 1px solid lighten($orangina, 45%);
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+            .month-name {
+                font-weight: 100;
+                color: $link-color;
+                margin-top: 20px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            .details {
+                font-size: 85%;
+            }
         }
-      }
     }
-  }
+
+    @media screen and (min-width: $on-palm + 170) {
+        border-top: 0;
+        margin: 0 auto;
+        width: $on-palm;
+        .events {
+            margin-top: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+
+            .item {
+                position: relative;
+                border-bottom: 1px solid lighten($orangina, 45%);
+                .month-name {
+                    position: absolute;
+                    left: -130px;
+                    top: 3px;
+                    font-weight: 100;
+                    color: white;
+                    div {
+                        width: 100px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer {
-  width: 100%;
-  font-weight:100;
-  color: $orangina;
-  background-color: white;
-  line-height: 3em;
-  height: auto;
-  margin-bottom: 0;
-  .copy {
-    margin: 0 auto;
-    text-align: center;
-  }
+    width: 100%;
+    font-weight: 100;
+    color: $orangina;
+    background-color: white;
+    line-height: 3em;
+    height: auto;
+    margin-bottom: 0;
+    .copy {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
