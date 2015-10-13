@@ -54,7 +54,7 @@ body {
 
 // logo + description
 .header-container {
-  
+
   width: 100%;
   background-color: #fff;
   margin: 0;
@@ -191,7 +191,7 @@ body {
   font-weight: 100;
   color: $orangina;
   background-color: white;
-  line-height: 3em;
+  line-height: 1.5em;
   height: auto;
   margin-bottom: 0;
   .copy {
@@ -199,10 +199,8 @@ body {
     text-align: center;
   }
 
-  position: relative;
+
   .github {
-    position: absolute;
-    bottom : 0;
-    left: 10px;
+    font-size: 12px;
   }
 }
