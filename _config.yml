@@ -1,9 +1,9 @@
 # Site settings
-title: lowlandsjs.nl
+title: hollandjs.nl
 email: jp@sytac.io
 description: > # JavaScript events in the Netherlands
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lowlandsjs.nl" # the base hostname & protocol for your site
+url: "http://hollandjs.nl" # the base hostname & protocol for your site
 twitter_username: jp10k
 github_username:  jpwesselink
 thankyou: sytac.io

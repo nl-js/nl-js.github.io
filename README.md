@@ -1,4 +1,4 @@
-# lowlandsjs
+# hollandjs
 
 ## What is it?
 
@@ -14,7 +14,7 @@ then we will add it for you.
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/lowlandsjs/lowlandsjs.github.io.git
+$ git clone https://github.com/hollandjs/hollandjs.github.io.git
 ```
 
 ### Add a post in `_posts`
