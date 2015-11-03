@@ -34,50 +34,52 @@ layout: default
         <div class="events">
             <dl>
                 {% assign post_index = 1 %}
+                {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
                 {% for post in site.posts reversed %}
-                {% assign postMonth = post.date | date: "%y %m" %}
-                {% assign postYear = post.date | date: "%Y" %}
-
-                {% if post_index == 1 %}
-                {% assign firstPostYear = post.date | date: "%Y" %}
-                {% endif %}
-
-                <dd class="item">
-                    {% if post_index == 1 or postMonth != previousPostMonth %}
-                    <div class="month-name">
-                        <div>
-                            {{ post.date | date: "%B" }}
-                            {% if firstPostYear != postYear %}{{ postYear }}{% endif %}
-                        </div>
-                    </div>
-                    {% assign previousPostMonth = post.date | date: "%y %m" %}
+                  {% assign postUnix = post.date | date: "%s" %}
+                  {% if postUnix > nowunix %}
+                    {% assign postMonth = post.date | date: "%y %m" %}
+                    {% assign postYear = post.date | date: "%Y" %}
+                    {% if post_index == 1 %}
+                      {% assign firstPostYear = post.date | date: "%Y" %}
                     {% endif %}
+                    <dd class="item">
 
-                    <div id="{{ post.id }}" class="item-post">
-                        <div class="time">
-                        <span class="wt">
-                            <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
-                                <span>{{ post.date | date: "%a" }}</span>
-                                <span>{{ post.date | date: "%d" }}</span>
-                            </time>
-                        </span> -
-                        <span class="title">
-                            <a href="{{ post.href }}">{{ post.title }}</a>
-                        </span>
-                        </div>
-                        <div class="details">
-                            <div class="info">
-                                <span><strong>Time:</strong> {{ post.time }}</span>
-                                <span><strong>Venue: </strong>{{ post.venue }}</span>
-                                <span><strong>Ticket:</strong> {{ post.ticket }}</span>
+                        {% if post_index == 1 or postMonth != previousPostMonth %}
+                        <div class="month-name">
+                            <div>
+                                {{ post.date | date: "%B" }}
+                                {% if firstPostYear != postYear %}{{ postYear }}{% endif %}
                             </div>
                         </div>
-                    </div>
-                </dd>
-                {% assign post_index = post_index | plus: 1 %}
+                        {% assign previousPostMonth = post.date | date: "%y %m" %}
+                        {% endif %}
+
+                        <div id="{{ post.id }}" class="item-post">
+                            <div class="time">
+                            <span class="wt">
+                                <time datetime="{{ post.date | date: ' %Y-%m-%d ' }}">
+                                    <span>{{ post.date | date: "%a" }}</span>
+                                    <span>{{ post.date | date: "%d" }}</span>
+                                </time>
+                            </span> -
+                            <span class="title">
+                                <a href="{{ post.href }}">{{ post.title }}</a>
+                            </span>
+                            </div>
+                            <div class="details">
+                                <div class="info">
+                                    <span><strong>Time:</strong> {{ post.time }}</span>
+                                    <span><strong>Venue: </strong>{{ post.venue }}</span>
+                                    <span><strong>Ticket:</strong> {{ post.ticket }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                    {% assign post_index = post_index | plus: 1 %}
+                  {% endif %}
                 {% endfor %}
             </dl>
         </div>
     </div>
-
 </div>
