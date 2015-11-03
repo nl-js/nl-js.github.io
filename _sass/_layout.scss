@@ -30,10 +30,11 @@ body {
   background-color: $orangina;
   text-align: right;
   line-height: $header-height;
-  h1 {
+  h1 a, h1 {
     float: left;
     margin: 0 0 0 20px;
     font-weight: 100;
+    text-decoration: none;
     color: #fff;
   }
   ul {
@@ -185,6 +186,16 @@ body {
       }
     }
   }
+}
+
+.container {
+    margin: 0 auto 50px auto;
+    padding: 20px;
+    background: #fff;
+
+    @media screen and (min-width: $on-palm + 170) {
+      width: $on-palm;
+    }
 }
 
 .footer {
