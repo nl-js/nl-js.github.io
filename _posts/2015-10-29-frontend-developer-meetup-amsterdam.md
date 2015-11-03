@@ -7,3 +7,4 @@ ticket: "free"
 time: "7:00pm"
 href: "http://www.meetup.com/it/Frontend-Developer-Meetup-Amsterdam/events/224789583/"
 ---
+asd
