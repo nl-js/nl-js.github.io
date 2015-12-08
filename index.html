@@ -25,7 +25,7 @@ layout: default
         <div class="events">
             <dl>
                 {% assign post_index = 1 %}
-                {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                {% capture nowunix %}{{'now' | date: '%s' | minus: 86400}}{% endcapture %}
                 {% for post in site.posts reversed %}
                   {% assign postUnix = post.date | date: "%s" %}
                   {% if postUnix > nowunix %}
