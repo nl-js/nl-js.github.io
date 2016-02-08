@@ -9,3 +9,4 @@ github_username:  jpwesselink
 thankyou: sytac.io
 # Build settings
 markdown: kramdown
+future: true
