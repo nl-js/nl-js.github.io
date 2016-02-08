@@ -1,7 +1,7 @@
 # hollandjs
 
 ## What is it?
-
+ 
 It's a site for listing all js related events in the Netherlands.
 
 ## How can I add my event?
