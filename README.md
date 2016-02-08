@@ -1,6 +1,6 @@
 # hollandjs
 
-## What is it? 
+## What is it?
  
 It's a site for listing all js related events in the Netherlands.
 
