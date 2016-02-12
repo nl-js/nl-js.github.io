@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "February meetup @ Springest"
+title: "NLHTML5 - February meetup @ Springest"
 date: 2016-02-18
 venue: "Rokin 75, Amsterdam"
 ticket: "free"
