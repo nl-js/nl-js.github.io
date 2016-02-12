@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "April meetup"
+title: "NLHTML5 - April meetup"
 date: 2016-04-21
 venue: "Prinsenkade 8, Breda"
 ticket: "free"
