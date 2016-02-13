@@ -1,24 +1,20 @@
 * {
   margin: 0;
 }
-
 html,
 body {
   height: 100%;
   background-color: $orangina;
 }
-
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -$footer-height;
 }
-
 .page-wrap:after {
   content: "";
   display: block;
 }
-
 .footer,
 .page-wrap:after {
   height: $footer-height;
@@ -28,11 +24,13 @@ body {
 .top-header {
   width: 100%;
   background-color: $orangina;
-  text-align: right;
+  text-align: left;
   line-height: $header-height;
-  h1 a, h1 {
+  height: 3em;
+  h1 a,
+  h1 {
     float: left;
-    margin: 0 0 0 20px;
+    margin: 0 8px 3px 8px;
     font-weight: 100;
     text-decoration: none;
     color: #fff;
@@ -52,18 +50,21 @@ body {
       }
     }
   }
+  @media all and (max-width: $on-phone) {
+    h1 {
+      margin: 10px;
+    }
+  }
 }
 
 // logo + description
 .header-container {
-
   width: 100%;
   background-color: #fff;
   margin: 0;
   padding: 10px;
   display: table;
   box-sizing: border-box;
-
   header {
     display: table-row;
     width: 100%;
@@ -79,6 +80,7 @@ body {
         object {
           height: auto;
           width: 100%;
+
           // padding: 10px;
         }
       }
@@ -91,6 +93,7 @@ body {
         margin: 0;
         padding: 0;
         color: $link-color;
+
         // background-color: $grey-color;
         height: 100%;
         text-align: left;
@@ -112,6 +115,7 @@ body {
           margin: 10px;
           width: 50%;
           object {
+
             // padding: 0;
           }
         }
@@ -130,12 +134,12 @@ body {
     }
   }
 }
-
 .events-container {
   width: 100%;
   background-color: white;
   margin: 0;
   border-top: 10px solid $orangina;
+
   .events {
     padding: 10px;
     dl {
@@ -160,16 +164,12 @@ body {
       }
     }
   }
-
   @media screen and (min-width: $on-palm + 170) {
     border-top: 0;
     margin: 0 auto;
     width: $on-palm;
     .events {
       margin-top: 20px;
-      padding: 20px;
-      margin-bottom: 30px;
-
       .item {
         position: relative;
         border-bottom: 1px solid lighten($orangina, 45%);
@@ -187,18 +187,55 @@ body {
       }
     }
   }
-}
-
-.container {
-    margin: 0 auto 50px auto;
-    padding: 20px;
-    background: #fff;
-
-    @media screen and (min-width: $on-palm + 170) {
-      width: $on-palm;
+  @media all and (max-width: $on-phone) {
+    .info {
+      span {
+        display: block;
+      }
     }
+    .events {
+      dl {
+        .item {
+          border-color: $orangina;
+        }
+      }
+    }
+  }
 }
 
+.white-line-container {
+  width: 100%;
+  background-color: white;
+  height: 10px;
+  display: table;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  border-top: 10px solid $orangina;
+  padding: 10px;
+  display: table;
+  box-sizing: border-box;
+
+  .content {
+    display: table-row;
+    padding: 10px;
+  }
+  @media screen and (min-width: $on-palm + 170) {
+    // border-top: 0;
+    margin: 0 auto;
+    width: $on-palm;
+    display: block;
+    padding-top: 0;
+    .content {
+      display: block;
+      padding: 20px;
+      // margin-bottom: 20px;
+    }
+  }
+}
 .footer {
   width: 100%;
   font-weight: 100;
@@ -211,8 +248,6 @@ body {
     margin: 0 auto;
     text-align: center;
   }
-
-
   .footer-item {
     font-size: 12px;
   }
