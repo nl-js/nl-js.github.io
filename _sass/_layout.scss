@@ -72,7 +72,6 @@ body {
     .parts {
       width: 100%;
       display: table; // haha cheat
-      line-height: 0;
       .logo {
         display: table-cell;
         height: auto;
@@ -88,7 +87,6 @@ body {
         display: none;
       }
       .description {
-        line-height: $base-line-height;
         display: table-cell;
         margin: 0;
         padding: 0;
@@ -99,7 +97,6 @@ body {
         text-align: left;
         vertical-align: bottom;
         padding-left: 10px;
-        font-size: 0.8em;
       }
     }
   }
