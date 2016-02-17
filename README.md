@@ -1,7 +1,7 @@
-# hollandjs
+# nl-js
 
 ## What is it?
- 
+
 It's a site for listing all js related events in the Netherlands.
 
 ## How can I add my event?
@@ -14,7 +14,7 @@ then we will add it for you.
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/hollandjs/hollandjs.github.io.git
+$ git clone https://github.com/nl-js/nl-js.github.io.git
 ```
 
 ### Add a post in `_posts`
