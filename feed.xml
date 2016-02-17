@@ -6,7 +6,7 @@ layout: null
   <channel>
     <title>{{ site.title | xml_escape }}</title>
     <webfeeds:related layout="card" target="browser"/>
-    <webfeeds:logo>http://hollandjs.nl/images/nljs.svg</webfeeds:logo>
+    <webfeeds:logo>http://nljs.nl/images/nljs.svg</webfeeds:logo>
     <webfeeds:accentColor>e67e22</webfeeds:accentColor>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
