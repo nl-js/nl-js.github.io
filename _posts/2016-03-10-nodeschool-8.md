@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NodeSchool #7 - NodeSchool Haarlem"
+title: "NodeSchool #8 - NodeSchool Haarlem"
 date: 2016-03-10
 venue: "Rozenstraat 1 2011 LS, Haarlem"
 ticket: "free"
