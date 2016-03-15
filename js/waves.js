@@ -34,7 +34,7 @@ Spring.prototype.update = function () {
 
 function createPath(strength) {
   var path = new Path({
-    fillColor: 'yellow'
+    fillColor: '#F0DB4F'
   });
   springs = [];
   for (var i = 0; i <= values.amount; i++) {

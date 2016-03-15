@@ -4,7 +4,7 @@
 html,
 body {
   height: 100%;
-  //background-color: $secondary;
+  //background-color: $tertiary;
 }
 .page-wrap {
   min-height: 100%;
@@ -50,7 +50,7 @@ body {
     margin: 0 8px 3px 8px;
     font-weight: 100;
     text-decoration: none;
-    color: white;
+    color: $quinary;
     margin-bottom: 3px;
   }
   ul {
@@ -86,6 +86,10 @@ body {
     display: table-row;
     width: 100%;
     background-color: $background-primary;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border-bottom: 5px solid white;
+    border-right: 10px solid white;
     .parts {
       width: 100%;
       display: table; // haha cheat
@@ -109,11 +113,10 @@ body {
         padding: 0;
         color: $link-color;
 
-        // background-color: $grey-color;
         height: 100%;
         text-align: left;
         vertical-align: bottom;
-        padding-left: 10px;
+        // padding-left: 10px;
       }
     }
   }
@@ -153,7 +156,9 @@ body {
   width: 100%;
   background-color: white;
   margin: 0 0 10px 0;
-  border-top: 10px solid $secondary;
+  border-top: 10px solid $tertiary;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
 
   .events {
     padding: 10px;
@@ -193,7 +198,7 @@ body {
           left: -130px;
           top: 3px;
           font-weight: 100;
-          color: white;
+          color: $link-color;
           div {
             width: 100px;
             text-align: right;
@@ -229,7 +234,7 @@ body {
   width: 100%;
   background-color: white;
   margin: 0;
-  border-top: 10px solid $secondary;
+  border-top: 10px solid $tertiary;
   padding: 10px;
   display: table;
   box-sizing: border-box;
@@ -254,7 +259,7 @@ body {
 .footer {
   width: 100%;
   font-weight: 100;
-  color: $primary;
+  color: $link-color;
   background-color: white;
   line-height: 1.5em;
   height: auto;
