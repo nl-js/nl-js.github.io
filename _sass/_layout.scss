@@ -4,26 +4,43 @@
 html,
 body {
   height: 100%;
-  background-color: $secondary;
+  //background-color: $secondary;
 }
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -$footer-height;
+  &:after {
+    content: "";
+    display: block;
+  }
+  &:after {
+    height: $footer-height;
+  }
 }
-.page-wrap:after {
-  content: "";
-  display: block;
+.page-wrap-header {
+
 }
-.footer,
-.page-wrap:after {
+
+.page-wrap-events {
+  min-height: 100%;
+  /* equal to footer height */
+  // margin-bottom: -$footer-height;
+  &:after {
+    content: "";
+    display: block;
+  }
+
+}
+
+.footer {
   height: $footer-height;
 }
 
 // header with menu
 .top-header {
   width: 100%;
-  background-color: $secondary;
+  background-color: $tertiary;
   text-align: left;
   line-height: $header-height;
   height: 3em;
@@ -60,7 +77,7 @@ body {
 // logo + description
 .header-container {
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 10px;
   display: table;
@@ -131,6 +148,7 @@ body {
     }
   }
 }
+
 .events-container {
   width: 100%;
   background-color: white;

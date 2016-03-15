@@ -2,7 +2,7 @@
 title: Upcoming JavaScript events, conferences and meetings in the Netherlands.
 layout: default
 ---
-<div class="page-wrap">
+<div class="page-wrap-header">
     <div class="header-container">
         <header>
             <div class="parts">
@@ -21,8 +21,11 @@ layout: default
             </div>
         </header>
     </div>
+    </div>
+    <div class="page-wrap-events">
     <div class="events-container">
         <div class="events">
+
             <dl>
                 {% assign post_index = 1 %}
                 {% capture nowunix %}{{ site.time | date: '%s' | minus: 86400 }}{% endcapture %}
@@ -74,3 +77,4 @@ layout: default
         </div>
     </div>
 </div>
+<canvas id="canvas" resize></canvas>
