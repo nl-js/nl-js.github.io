@@ -4,7 +4,7 @@
 html,
 body {
   height: 100%;
-  background-color: $secondary;
+  background-color: $tertiary;
 }
 .page-wrap {
   min-height: 100%;
@@ -23,7 +23,7 @@ body {
 // header with menu
 .top-header {
   width: 100%;
-  background-color: $secondary;
+  background-color: $tertiary;
   text-align: left;
   line-height: $header-height;
   height: 3em;
@@ -33,7 +33,7 @@ body {
     margin: 0 8px 3px 8px;
     font-weight: 100;
     text-decoration: none;
-    color: white;
+    color: $quinary;
     margin-bottom: 3px;
   }
   ul {
@@ -135,7 +135,7 @@ body {
   width: 100%;
   background-color: white;
   margin: 0 0 10px 0;
-  border-top: 10px solid $secondary;
+  border-top: 10px solid $tertiary;
 
   .events {
     padding: 10px;
@@ -175,7 +175,7 @@ body {
           left: -130px;
           top: 3px;
           font-weight: 100;
-          color: white;
+          color: $link-color;
           div {
             width: 100px;
             text-align: right;
@@ -211,7 +211,7 @@ body {
   width: 100%;
   background-color: white;
   margin: 0;
-  border-top: 10px solid $secondary;
+  border-top: 10px solid $tertiary;
   padding: 10px;
   display: table;
   box-sizing: border-box;
@@ -236,7 +236,7 @@ body {
 .footer {
   width: 100%;
   font-weight: 100;
-  color: $primary;
+  color: $link-color;
   background-color: white;
   line-height: 1.5em;
   height: auto;
