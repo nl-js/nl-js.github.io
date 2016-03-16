@@ -5,15 +5,15 @@ var color3 = new Color('#01a2a6');
 color3.alpha = 0.5;
 var color4 = new Color('#272933');
 
-var waves = [new Wave(color4, 0.07), new Wave(color3, 0.08), new Wave(color2, 0.09), new Wave(color1, 0.05)];
+var waves = [new Wave(color4, 0.07), new Wave(color3, 0.08), new Wave(color2, 0.09), new Wave(color1, 0.1)];
 
 function Wave(fillColor, strength) {
   this.strength = strength;
   this.fillColor = fillColor;
-  this.path;
+  this.path; // = this.createPath(0.1);
   this.values = {
-    friction: 0.2,
-    timeStep: 0.15,
+    friction: 0.8,
+    timeStep: 0.01,
     amount: 15,
     mass: 4,
     count: 0
@@ -100,17 +100,9 @@ function onResize() {
   }
 }
 
-view.fire('mousemove', {
-
-  delta: new Point(80, 100),
-  point: new Point(100, 100)
-})
-// onMouseMove({ point: new Point(235, 185)});
 function onMouseMove(event) {
-  console.log(event);
   for (var i = 0; i < waves.length; i++) {
     var wave = waves[i];
-
     var location = wave.path.getNearestLocation(event.point);
     var segment = location.segment;
     var point = segment.point;

@@ -42,16 +42,22 @@ body {
   width: 100%;
   background-color: $tertiary;
   text-align: left;
-  line-height: $header-height;
-  height: 3em;
+  // line-height: $header-height;
+  // height: 3em;
+  .menu  {
+    width: 100%;
+    float: left;
+    padding: 0 8px 3px 16px;
+    background-color: $tertiary;
+    display: block;
+  }
   h1 a,
   h1 {
-    float: left;
-    margin: 0 8px 3px 8px;
     font-weight: 100;
     text-decoration: none;
     color: $quinary;
-    margin-bottom: 3px;
+    margin-top: 6px;
+    margin-bottom: 6px;
   }
   ul {
     padding-right: 1em;
@@ -69,7 +75,7 @@ body {
   }
   @media all and (max-width: $on-phone) {
     h1 {
-      margin: 10px;
+      // margin: 10px;
     }
   }
 }
@@ -79,7 +85,7 @@ body {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
   display: table;
   box-sizing: border-box;
   header {
@@ -101,7 +107,6 @@ body {
           height: auto;
           width: 100%;
 
-          // padding: 10px;
         }
       }
       .divider {
@@ -110,7 +115,7 @@ body {
       .description {
         display: table-cell;
         margin: 0;
-        padding: 0;
+        padding-left: 10px;
         color: $link-color;
 
         height: 100%;
@@ -121,7 +126,7 @@ body {
     }
   }
   @media screen and (min-width: $on-palm +170) {
-    padding: 20px 0;
+    padding: 10px 0;
     header {
       display: block;
       margin: 0 auto;
@@ -143,6 +148,7 @@ body {
         }
         .description {
           width: 50%;
+          padding: 0;
           p {
             margin-bottom: 15px;
           }
@@ -157,8 +163,7 @@ body {
   background-color: white;
   margin: 0 0 10px 0;
   border-top: 10px solid $tertiary;
-  border-left: 10px solid white;
-  border-right: 10px solid white;
+
 
   .events {
     padding: 10px;
@@ -185,11 +190,13 @@ body {
     }
   }
   @media screen and (min-width: $on-palm + 170) {
+    border-left: 10px solid white;
+    border-right: 10px solid white;
     border-top: 0;
     margin: 0 auto 10px auto;
     width: $on-palm;
     .events {
-      margin-top: 20px;
+      margin-top: 10px;
       .item {
         position: relative;
         border-bottom: 1px solid lighten($primary, 45%);
