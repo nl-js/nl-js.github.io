@@ -101,13 +101,12 @@ function onResize() {
 }
 
 view.fire('mousemove', {
-
-  delta: new Point(80, 100),
-  point: new Point(100, 100)
-})
-// onMouseMove({ point: new Point(235, 185)});
+    delta: new Point(80, 100),
+    point: new Point(100, 100)
+  })
+  // onMouseMove({ point: new Point(235, 185)});
 function onMouseMove(event) {
-  console.log(event);
+  // oh hell no Eleonora
   for (var i = 0; i < waves.length; i++) {
     var wave = waves[i];
 
