@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The biggest dev conference lands in Amsterdam! (day 1)"
+title: "Codemotion Amsterdam (day 1)"
 date: 2016-05-11
 venue: "Kromhouthal, Gedempt Hamerkanaal 231, Amsterdam"
 ticket: "$$$"
